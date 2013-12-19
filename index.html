@@ -1,0 +1,99 @@
+<!doctype html>
+<head>
+	<title>dodecagon</title>
+	<link href="tpmdodecagondiv.css" rel="stylesheet" />
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' type='text/javascript'></script>
+	<script src='tpmdodecagondiv.js' type='text/javascript'></script> 
+	<script type='text/javascript'>
+	$(function(){
+		$('.tpmdodecagondiv').tpmdodecagondiv({
+			width : '250px',				//cotom width (and hight)
+			corners : 12, 					//0,4,6,8,12   0 = circle
+			cursorpointer : 'true',			//true/false, or your own css state
+			costomclass : 'fl myclass',
+			//wrong options will be changed to default
+		});
+		$('.tpmdodecagondiv2').tpmdodecagondiv({
+			width : '150px',
+			corners : 8,
+            cursorpointer : 'true',
+		});
+		$('.tpmdodecagondiv3').tpmdodecagondiv({
+			width : '350px',
+			corners : 0,
+            cursorpointer : 'true',
+		});
+        $('.tpmdodecagondiv4').tpmdodecagondiv({
+            width : '300px',
+			corners : 4,
+		});
+        $('.tpmdodecagondiv5').tpmdodecagondiv({
+			width : '250px',
+			corners : 6,
+			cursorpointer : 'true',
+			costomclass : 'fl fancyclass myclass',
+		});
+	});
+	</script>
+</head>
+<style>
+	br{
+		clear: both;
+	}
+	.fl{
+		float:left;
+	}
+	.row_a, .row_b, .row_c{
+        position: absolute;
+	}
+	.row_a .fancyclass, .row_b .fancyclass, .row_c .fancyclass{
+		margin: 0 5px 0 5px;
+	}
+	.row_b{
+        margin-top: 225px;
+		margin-left: 130px;
+	}
+    .row_c{
+        margin-top: 450px;
+    }
+	.row_a.first{
+		margin-top:0;
+	}
+	.clear_it{
+		clear:both;
+	}
+	.myclass{
+		transition: 0.5s ease-in-out;
+	}
+	.myclass:hover{
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+</style>
+<body>
+	<img class="tpmdodecagondiv" src="http://placehold.it/290x280">
+	<img class="tpmdodecagondiv" src="http://placehold.it/260x280"><br/>
+	<img class="tpmdodecagondiv2" src="http://placehold.it/420x380"><br/>
+	<img class="tpmdodecagondiv3" src="http://placehold.it/500x500"><br/>
+    <img class="tpmdodecagondiv4" src="http://placehold.it/300x500"><br/>
+	<div class="row_a first">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/250x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/250x375">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/250x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/450x300">
+	</div>
+	<div class="clear_it"></div>
+	<div class="row_b">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/250x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/500x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/250x350">
+	</div>
+	<div class="clear_it"></div>
+	<div class="row_c">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/650x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/350x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/300x350">
+		<img class="tpmdodecagondiv5" src="http://placehold.it/275x400">
+	</div>
+
+</body>
